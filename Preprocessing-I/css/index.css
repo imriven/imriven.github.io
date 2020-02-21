@@ -1,0 +1,418 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Krona One'), local('KronaOne-Regular'), url(https://fonts.gstatic.com/s/kronaone/v8/jAnEgHdjHcjgfIb1ZcUyNoWl.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  /*border:1px solid orangered; */
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+/********* Main *********/
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+#videoBG {
+  position: fixed;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 1.77777778) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 1.77777778) {
+  #videoBG {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #videoBG {
+    display: none;
+  }
+}
+body {
+  background: url('../images/rain-drops.jpg');
+  background-size: cover;
+}
+/* video background code provided by TK - https://redstapler.co/responsive-css-video-background/ */
+.container {
+  display: flex;
+  width: 100%;
+}
+.page {
+  background-color: rgba(103, 128, 159, 0.8);
+  border-radius: 15px;
+  margin-top: 2%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+nav {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+  }
+}
+nav .links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+}
+@media (max-width: 500px) {
+  nav .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+nav h1 {
+  font-size: 2rem;
+  color: lightslategray;
+  font-family: 'Krona One', sans-serif;
+}
+@media (max-width: 500px) {
+  nav h1 {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 3% 0;
+  }
+}
+nav address {
+  background-color: darkorchid;
+  font-family: 'Krona One', sans-serif;
+  text-decoration: underline overline;
+  text-decoration-color: orange;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  nav address {
+    text-align: center;
+  }
+}
+/********* Introduction **********/
+.intro-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 3%;
+  width: 26%;
+}
+.intro-img img {
+  border-radius: 50px;
+}
+@media (max-width: 500px) {
+  .intro-img img {
+    display: none;
+  }
+}
+.top-intro {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  width: 100%;
+  padding: 3% 0;
+}
+.top-intro h2 {
+  display: flex;
+  justify-content: center;
+  margin: 2% 0;
+  font-size: 1.5rem;
+}
+.top-intro p {
+  display: flex;
+  justify-content: center;
+  line-height: 2.3;
+  width: 90%;
+  text-align: justify;
+}
+/****** Skills ******/
+.empty {
+  width: 100%;
+  margin: 3%;
+}
+.bottom-resume {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .bottom-resume {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.bottom-resume .skills-container {
+  margin: 0 10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10%;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .bottom-resume .skills-container {
+    margin: 0 10% 15% 10%;
+    height: 90%;
+  }
+}
+.bottom-resume #Skills {
+  width: 32%;
+}
+@media (max-width: 500px) {
+  .bottom-resume #Skills {
+    width: 100%;
+  }
+}
+.bottom-resume h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
+  font-size: 1.5rem;
+}
+.bottom-resume #Tools {
+  width: 25%;
+}
+@media (max-width: 500px) {
+  .bottom-resume #Tools {
+    width: 100%;
+  }
+}
+.bottom-resume .tool-container {
+  margin-right: 10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10%;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .bottom-resume .tool-container {
+    margin: 0 10% 15% 10%;
+    height: 90%;
+  }
+}
+.bottom-resume #Work .work-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10% 15%;
+  line-height: 120%;
+  width: 100%;
+}
+.bottom-resume #Work li {
+  margin: 6% 5%;
+}
+.bottom-resume #Work p {
+  font-size: small;
+}
+.end-resume {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .end-resume {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.end-resume .edu-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10% 30%;
+  height: 100%;
+  width: 140%;
+  line-height: 120%;
+}
+@media (max-width: 500px) {
+  .end-resume .edu-container {
+    width: 100%;
+  }
+}
+.end-resume h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15%;
+  font-size: 1.5rem;
+  padding: 3% 0;
+}
+.end-resume #Education {
+  width: 35%;
+}
+@media (max-width: 500px) {
+  .end-resume #Education {
+    width: 100%;
+    margin: 0 10% 15% 10%;
+    height: 90%;
+  }
+}
+.end-resume #Hobbies {
+  width: 49%;
+}
+@media (max-width: 500px) {
+  .end-resume #Hobbies {
+    width: 100%;
+    margin: 0 10% 15% 10%;
+    height: 90%;
+  }
+}
+.end-resume .hobby-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10% 30%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.end-resume li {
+  margin: 6% 5%;
+}
+.end-resume p {
+  font-size: small;
+}
+footer {
+  padding: 2%;
+  text-align: center;
+}

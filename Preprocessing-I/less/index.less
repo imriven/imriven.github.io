@@ -1,0 +1,390 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Krona+One|Montserrat&display=swap');
+
+//var fonts
+@header:'Krona One', sans-serif;
+@copy-text: 'Montserrat', sans-serif;
+
+// var colors
+@highlight: darkorchid;
+@accent: lightslategray;
+@contrast: orange;
+
+
+//mixins
+
+.centered(){
+	display:flex;
+	justify-content:center;
+  }
+
+.highlight(){
+	background-color: @highlight;
+	font-family: @header;
+	text-decoration: underline overline;
+	text-decoration-color: @contrast;
+}
+
+.solid(){
+	background-color:rgba(255, 255, 255, .5);
+}
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/*border:1px solid orangered; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+
+/********* Main *********/
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+  }
+
+
+  
+#videoBG {
+	position:fixed;
+	z-index: -1;
+  
+  @media (min-aspect-ratio: 16/9) {	
+		width:100%;
+		height: auto;
+	}
+  
+
+  @media (max-aspect-ratio: 16/9) {
+		width:auto;
+		height: 100%;
+	}
+
+  @media (max-width: 767px) {
+		display: none;
+	}
+
+  }
+
+body {
+	background: url('../images/rain-drops.jpg');
+	background-size: cover;
+}
+  /* video background code provided by TK - https://redstapler.co/responsive-css-video-background/ */
+
+.container {
+	display: flex;
+	width: 100%;
+}
+
+.page {
+	background-color: rgba(103, 128, 159, .8);
+	border-radius: 15px;
+	margin-top: 2%;
+	width: 80%;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+  }
+
+nav {
+	flex-direction: row;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 3%;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-wrap: wrap-reverse;
+		width: 100%;
+	}
+  
+  	.links {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 60%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			}
+	  }
+
+	  
+
+  	h1 {
+		font-size: 2rem;
+		color: @accent;
+		font-family: @header;
+
+		@media (max-width: 500px) {
+			color: white;
+			font-size: 1.2rem;
+			text-align: center;
+			margin: 3% 0;
+			}
+	}
+
+	address {
+		.highlight();
+		margin-top: 2%;
+
+		@media (max-width: 500px) {
+			text-align: center;
+			}
+	}
+	
+}
+  
+
+/********* Introduction **********/
+
+.intro-img {
+	
+	.centered();
+	margin: 0 3%;
+	width: 26%;
+
+	img {
+		border-radius: 50px;
+		
+		@media (max-width: 500px) {
+			display: none;
+		}
+	}
+}
+
+
+.top-intro {
+	.solid();
+	display: flex;
+	width:100%;
+	padding: 3% 0;
+
+	h2 {
+		.centered();
+		margin: 2% 0;
+		font-size: 1.5rem;
+	}
+
+	p {
+		.centered();
+		line-height: 2.3;
+		width: 90%;
+		text-align: justify;
+	}
+
+}
+  /****** Skills ******/
+
+.empty {
+	width: 100%;
+	margin: 3%;
+
+
+}
+
+.bottom-resume {
+	display: flex;
+	flex-wrap: wrap;
+	.solid();
+	justify-content: space-between;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.skills-container{
+		margin: 0 10%;
+		.solid();
+		padding:10%;
+		height: 100%;
+
+		@media (max-width: 500px) {
+			margin: 0 10% 15% 10%;
+			height: 90%;
+		}
+		
+	}
+
+	#Skills {
+		width: 32%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			}
+	}
+
+	h2 {
+		.centered();
+		margin-bottom: 15%;
+		font-size: 1.5rem;
+		
+	}
+
+	#Tools {
+		width: 25%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			}
+
+	}
+
+	.tool-container{
+		margin-right: 10%;
+		.solid();
+		padding:10%;
+		height: 100%;
+
+		@media (max-width: 500px) {
+			margin: 0 10% 15% 10%;
+			height: 90%;
+		}
+	}
+
+	#Work {
+		
+
+	.work-container{
+		.solid();
+		padding:10% 15%;
+		line-height: 120%;
+		width: 100%;
+	}
+
+	li {
+		margin: 6% 5%;
+	}
+
+	p {
+		font-size: small;
+	}
+	}
+}
+
+.end-resume {
+	display: flex;
+	flex-wrap: wrap;
+	.solid();
+	justify-content: space-between;
+	width: 100%;
+
+	@media (max-width: 500px) {
+		display: flex;
+		flex-wrap: wrap;
+		}
+
+	.edu-container{
+		.solid();
+		padding:10% 30%;
+		height: 100%;
+		width:140%;
+		line-height: 120%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			}
+	}
+
+	h2 {
+		.centered();
+		margin-bottom: 15%;
+		font-size: 1.5rem;
+		padding: 3% 0;
+		
+	}
+
+	#Education {
+		width: 35%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			margin: 0 10% 15% 10%;
+			height: 90%;
+			}
+	}
+
+	#Hobbies {
+		width: 49%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			margin: 0 10% 15% 10%;
+			height: 90%;
+			}
+	}
+
+
+	.hobby-container{
+		.solid();
+		padding:10% 30%;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	li {
+		margin: 6% 5%
+	}
+
+	p {
+		font-size: small;
+	}
+}
+
+footer {
+	padding: 2%;
+	text-align: center;
+}
